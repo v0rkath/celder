@@ -24,7 +24,14 @@ export const Projects: Project[] = [
   {
     name: "Flipdish Menu",
     description: "A frontend assessment provided by Flipdish.",
-    tech: ["React", "Typescript", "Vitest", "MSW", "TailwindCSS"],
+    tech: [
+      "React",
+      "Typescript",
+      "Vitest",
+      "MSW",
+      "TailwindCSS",
+      "React Query",
+    ],
     github_link: "https://github.com/v0rkath/Flipdish-Assessment",
     deployed_link: "https://flipdish-assessment.vercel.app/",
   },
