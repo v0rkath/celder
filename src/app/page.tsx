@@ -1,28 +1,34 @@
+import Image from "next/image";
+
 import { WorkItem } from "@/components/WorkItem";
 import { Projects } from "@/utils/work-items";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
+    <div className="z-[1000] grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
       <nav className="rounded border-1 border-slate-800 p-4">
-        <ul className="flex gap-x-4">
+        <ul className="flex gap-x-8">
           <li className="font-[family-name:var(--font-geist-mono)]">about</li>
-          <li className="font-[family-name:var(--font-geist-mono)]">work</li>
-          <li className="font-[family-name:var(--font-geist-mono)]">background</li>
+          <li className="font-[family-name:var(--font-geist-mono)]">projects</li>
+          <li className="font-[family-name:var(--font-geist-mono)]">
+            background
+          </li>
         </ul>
       </nav>
-      <main className="w-[460px]">
-        <div className="mb-12">
-          <h2 className="text-3xl">about</h2>
+      <main className="md:w-[460px]">
+        <section className="mb-24">
+          <h2 className="mb-4 text-3xl">About</h2>
           <p className="font-[family-name:var(--font-geist-mono)] text-sm">
-            I'm a <span className="font-semibold">frontend developer</span> with a previous background in avionics
-            engineering. I've always had a strong passion for problem-solving.
+            I'm a <span className="font-semibold">frontend developer</span> with
+            a passion for problem solving which comes from my background in
+            avionics engineering.
           </p>
-        </div>
+        </section>
         <section className="flex flex-col gap-y-4">
-            <h2 className="text-3xl mb-4">work</h2>
-            {Projects.map((project) => <WorkItem key={project.name} project={project} />)} 
+          <h2 className="mb-4 text-3xl">Projects</h2>
+          {Projects.map((project) => (
+            <WorkItem key={project.name} project={project} />
+          ))}
         </section>
       </main>
       <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]">
@@ -47,7 +53,6 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-
           Examples
         </a>
         <a
