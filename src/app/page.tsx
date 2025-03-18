@@ -15,7 +15,7 @@ export default function Home() {
           <li className="font-[family-name:var(--font-geist-mono)]">
             <a href="#background">background</a>
           </li>
-          <li className="font-[family-name:var(--font-geist-mono)]">resume</li>
+          <li className="font-[family-name:var(--font-geist-mono)]"><a href="/Callum_Elder_Resume_2025.pdf">resume</a></li>
         </ul>
       </nav>
       <main className="mt-8 w-[380px] md:w-[460px]">
@@ -24,7 +24,7 @@ export default function Home() {
             About
           </h2>
           <p className="font-[family-name:var(--font-geist-mono)] text-sm">Hi, my name is Callum.
-            I&apos;m a <span className="font-semibold">frontend developer</span>{" "}
+            I&apos;m a self taught <span className="font-semibold">frontend developer</span>{" "}
             with a passion for problem solving which comes from my background in
             avionics engineering when dealing with complex systems.
           </p>
