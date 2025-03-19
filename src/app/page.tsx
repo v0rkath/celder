@@ -19,9 +19,9 @@ export default function Home() {
         </ul>
       </nav>
       <main className="mt-8 w-[380px] md:w-[460px]">
-        <section className="mb-24" id="about">
-          <h2 className="mb-4 border-b-1 border-gray-500 pb-4 text-3xl">
-            About
+        <section className="mb-24 mt-8" id="about">
+          <h2 className="mb-4 border-b-1 border-gray-500 pb-4 text-3xl flex justify-between items-center">
+            About<img className="inline h-16 w-16 aspect-square" src="/me.png" />
           </h2>
           <p className="font-[family-name:var(--font-geist-mono)] text-sm">Hi, my name is Callum.
             I&apos;m a self taught <span className="font-semibold">frontend developer</span>{" "}
