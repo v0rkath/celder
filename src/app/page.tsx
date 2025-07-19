@@ -7,7 +7,7 @@ export default function Home() {
       <nav className="mt-12 rounded border-1 border-slate-400 bg-[#090909] p-4">
         <ul className="flex gap-x-6">
           <li className="font-[family-name:var(--font-geist-mono)]">
-            <a href="#about">about</a>
+            <a href="#about">abouts</a>
           </li>
           <li className="font-[family-name:var(--font-geist-mono)]">
             <a href="#projects">projects</a>
