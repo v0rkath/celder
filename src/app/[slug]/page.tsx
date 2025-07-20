@@ -30,23 +30,30 @@ export default async function PostPage({
     : null;
 
   return (
-    <main className="container mx-auto flex min-h-screen max-w-3xl flex-col gap-4 p-8">
-      <Link href="/" className="hover:underline">
+    <main className="container mx-auto flex min-h-screen max-w-3xl flex-col p-8 font-[family-name:var(--font-geist-sans)]">
+      <Link href="/" className="mb-12 hover:underline">
         ← Back to posts
       </Link>
-      {postImageUrl && (
-        <img
-          src={postImageUrl}
-          alt={post.title}
-          className="aspect-video rounded-xl"
-          width="550"
-          height="310"
-        />
-      )}
-      <h1 className="mb-8 text-4xl font-bold">{post.title}</h1>
-      <div className="prose">
-        <p>Published: {new Date(post.publishedAt).toLocaleDateString()}</p>
-        {Array.isArray(post.body) && <PortableText value={post.body} />}
+      <div className="mx-auto">
+        {postImageUrl && (
+          <img
+            src={postImageUrl}
+            alt={post.title}
+            className="mx-auto aspect-video rounded-xl"
+            width="550"
+            height="310"
+          />
+        )}
+        <div className="mb-12">
+          <h1 className="text-4xl font-semibold">{post.title}</h1>
+          <p className="text-xs text-gray-500">
+            {new Date(post.publishedAt).toLocaleDateString()}
+          </p>
+        </div>
+
+        <div className="prose">
+          {Array.isArray(post.body) && <PortableText value={post.body} />}
+        </div>
       </div>
     </main>
   );
